@@ -1,7 +1,8 @@
-public class CustomConnection implements AutoCloseable {
+public class Connection implements AutoCloseable {
+
     private final int id;
 
-    public CustomConnection(int id) {
+    public Connection(int id) {
         this.id = id;
     }
 
@@ -13,6 +14,6 @@ public class CustomConnection implements AutoCloseable {
     public void close() throws Exception {
         System.out.println("closing connection! : " + id);
         throw new Exception("something went wrong on connection : " + id + "!");
-//        System.out.println("connection closed!");
+        /*System.out.println("connection closed!");*/
     }
 }
